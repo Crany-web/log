@@ -1,0 +1,226 @@
+⇒  sudo pacman -S linux-zen linux-zen-headers 
+[sudo] crany 的密码：正在解析依赖关系...
+正在查找软件包冲突...
+
+软件包 (2) linux-zen-6.4.11.zen2-1  linux-zen-headers-6.4.11.zen2-1
+
+全部安装大小：  293.70 MiB
+
+:: 进行安装吗？ [Y/n] 
+(2/2) 正在检查密钥环里的密钥                                          [#######################################] 100%
+(2/2) 正在检查软件包完整性                                            [#######################################] 100%
+(2/2) 正在加载软件包文件                                              [#######################################] 100%
+(2/2) 正在检查文件冲突                                                [#######################################] 100%
+(2/2) 正在检查可用存储空间                                            [#######################################] 100%
+:: 正在处理软件包的变化...
+(1/2) 正在安装 linux-zen                                              [#######################################] 100%
+linux-zen 的可选依赖    wireless-regdb: to set the correct wireless channels of your country [已安装]
+    linux-firmware: firmware images needed for some devices [已安装]
+(2/2) 正在安装 linux-zen-headers                                      [#######################################] 100%
+:: 正在运行事务后钩子函数...
+(1/5) Arming ConditionNeedsUpdate...
+(2/5) Updating module dependencies...
+(3/5) Install DKMS modules
+==> dkms install --no-depmod ashmem_xdroid/2.0 -k 6.4.11-zen2-1-zen
+Error! The directory /var/lib/dkms/ashmem_xdroid/2.0/source does not appear to have module source located within it.
+Build halted.
+==> WARNING: `dkms install --no-depmod ashmem_xdroid/2.0 -k 6.4.11-zen2-1-zen' exited 8
+==> dkms install --no-depmod rtl8821ce/1.0.5.r158.ga478095 -k 6.4.11-zen2-1-zen
+==> dkms install --no-depmod vmware-workstation/17.0.1_21139696 -k 6.4.11-zen2-1-zen
+Error! Bad return status for module build on kernel: 6.4.11-zen2-1-zen (x86_64)
+Consult /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/make.log for more information.
+==> WARNING: `dkms install --no-depmod vmware-workstation/17.0.1_21139696 -k 6.4.11-zen2-1-zen' exited 10
+==> dkms install --no-depmod binder_xdroid/2.0 -k 6.4.11-zen2-1-zen
+Error! The directory /var/lib/dkms/binder_xdroid/2.0/source does not appear to have module source located within it.
+Build halted.
+==> WARNING: `dkms install --no-depmod binder_xdroid/2.0 -k 6.4.11-zen2-1-zen' exited 8
+==> dkms install --no-depmod asg_xdroid/2.0 -k 6.4.11-zen2-1-zen
+Error! The directory /var/lib/dkms/asg_xdroid/2.0/source does not appear to have module source located within it.
+Build halted.
+==> WARNING: `dkms install --no-depmod asg_xdroid/2.0 -k 6.4.11-zen2-1-zen' exited 8
+==> depmod 6.4.11-zen2-1-zen
+(4/5) Updating linux initcpios...
+==> Building image from preset: /etc/mkinitcpio.d/linux-zen.preset: 'default'
+==> Using default configuration file: '/etc/mkinitcpio.conf'
+  -> -k /boot/vmlinuz-linux-zen -g /boot/initramfs-linux-zen.img --microcode /boot/intel-ucode.img
+==> Starting build: '6.4.11-zen2-1-zen'
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+  -> Running build hook: [modconf]
+  -> Running build hook: [kms]
+  -> Running build hook: [keyboard]
+==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+  -> Running build hook: [keymap]
+  -> Running build hook: [consolefont]
+==> WARNING: consolefont: no font found in configuration
+  -> Running build hook: [block]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-zen.img'
+==> Image generation successful
+==> Building image from preset: /etc/mkinitcpio.d/linux-zen.preset: 'fallback'
+==> Using default configuration file: '/etc/mkinitcpio.conf'
+  -> -k /boot/vmlinuz-linux-zen -g /boot/initramfs-linux-zen-fallback.img -S autodetect --microcode /boot/intel-ucode.img
+==> Starting build: '6.4.11-zen2-1-zen'
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [modconf]
+  -> Running build hook: [kms]
+==> WARNING: Possibly missing firmware for module: 'ast'
+  -> Running build hook: [keyboard]
+==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+  -> Running build hook: [keymap]
+  -> Running build hook: [consolefont]
+==> WARNING: consolefont: no font found in configuration
+  -> Running build hook: [block]
+==> WARNING: Possibly missing firmware for module: 'qed'
+==> WARNING: Possibly missing firmware for module: 'qla1280'
+==> WARNING: Possibly missing firmware for module: 'wd719x'
+==> WARNING: Possibly missing firmware for module: 'aic94xx'
+==> WARNING: Possibly missing firmware for module: 'qla2xxx'
+==> WARNING: Possibly missing firmware for module: 'bfa'
+  -> Running build hook: [filesystems]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-zen-fallback.img'
+==> Image generation successful
+(5/5) Refreshing PackageKit...
+
+----------------------------------------------------------------------请忽略xDroid的报错（以卸载）--------------------------------------------------------------------------------------------------------------
+
+# 以下是上文中提到的/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/make.log内容
+
+crany:~/ $ cat /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/make.log                           [20:04:26]
+DKMS make.log for vmware-workstation-17.0.1_21139696 for kernel 6.4.11-zen2-1-zen (x86_64)
+2023年 08月 21日 星期一 20:03:04 CST
+cp -r /usr/src/vmware-workstation-17.0.1_21139696/vmmon-only vmmon-only
+cp -r /usr/src/vmware-workstation-17.0.1_21139696/vmnet-only vmnet-only
+make KVERSION=6.4.11-zen2-1-zen VM_KBUILD=yes -C vmnet-only
+make KVERSION=6.4.11-zen2-1-zen VM_KBUILD=yes -C vmmon-only
+make[1]: 进入目录“/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only”
+make[1]: 进入目录“/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only”
+Using kernel build system.
+Using kernel build system.
+make -C /lib/modules/6.4.11-zen2-1-zen/build/include/.. M=$PWD SRCROOT=$PWD/. \
+  MODULEBUILDDIR= modules
+make -C /lib/modules/6.4.11-zen2-1-zen/build/include/.. M=$PWD SRCROOT=$PWD/. \
+  MODULEBUILDDIR= modules
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/driver.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/driverLog.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/hostif.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/apic.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/comport.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/cpuid.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/crosspage.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/driver.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/hub.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/memtrack.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/moduleloop.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/phystrack.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/sharedAreaVmmon.o
+In file included from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/cpu_types.h:29,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/modulecall.h:33,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/moduleloop.c:33:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/vm_basic_defs.h:779: 警告：“DO_ONCE”重定义  779 | #define DO_ONCE(code)                                                   \
+      | 
+In file included from ./include/linux/prandom.h:12,
+                 from ./include/linux/random.h:153,
+                 from ./include/linux/nodemask.h:97,
+                 from ./include/linux/sched.h:23,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/moduleloop.c:31:
+./include/linux/once.h:46: 附注：这是先前定义的位置   46 | #define DO_ONCE(func, ...)                                                   \
+      | 
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/statVarsVmmon.o
+In file included from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/cpu_types.h:29,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/modulecall.h:33,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/hostif.c:58:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/vm_basic_defs.h:779: 警告：“DO_ONCE”重定义  779 | #define DO_ONCE(code)                                                   \
+      | 
+In file included from ./include/linux/prandom.h:12,
+                 from ./include/linux/random.h:153,
+                 from ./include/linux/nodemask.h:97,
+                 from ./include/linux/sched.h:23,
+                 from ./include/linux/binfmts.h:5,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/hostif.c:31:
+./include/linux/once.h:46: 附注：这是先前定义的位置   46 | #define DO_ONCE(func, ...)                                                   \
+      | 
+In file included from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/cpu_types.h:29,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/modulecall.h:33,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./common/vmx86.h:33,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/driver.h:32,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/driver.c:47:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/vm_basic_defs.h:779: 警告：“DO_ONCE”重定义  779 | #define DO_ONCE(code)                                                   \
+      | 
+In file included from ./include/linux/prandom.h:12,
+                 from ./include/linux/random.h:153,
+                 from ./include/linux/nodemask.h:97,
+                 from ./include/linux/list_lru.h:12,
+                 from ./include/linux/fs.h:13,
+                 from ./include/linux/highmem.h:5,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/linux/driver.c:25:
+./include/linux/once.h:46: 附注：这是先前定义的位置   46 | #define DO_ONCE(func, ...)                                                   \
+      | 
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/userif.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/task.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/netif.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/vmx86.o
+In file included from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/cpu_types.h:29,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/modulecall.h:33,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/vmx86.h:33,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/vmx86.c:38:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/vm_basic_defs.h:779: 警告：“DO_ONCE”重定义  779 | #define DO_ONCE(code)                                                   \
+      | 
+In file included from ./include/linux/prandom.h:12,
+                 from ./include/linux/random.h:153,
+                 from ./include/linux/nodemask.h:97,
+                 from ./include/linux/sched.h:23,
+                 from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/common/vmx86.c:31:
+./include/linux/once.h:46: 附注：这是先前定义的位置   46 | #define DO_ONCE(func, ...)                                                   \
+      | 
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/bridge.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/bootstrap.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/procfs.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/monLoader.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/monLoaderVmmon.o
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/monLoader.c: 在函数‘MonLoader_Process’中:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/monLoader.c:794:24: 警告：the comparison will always evaluate as ‘false’ for the address of ‘entries’ will never be NULL [-Waddress]
+  794 |    if (header->entries == 0 || header->count == 0) {
+      |                        ^~
+In file included from /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/monLoader.c:57:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/./include/monLoader.h:239:19: 附注：‘entries’在此声 明  239 |    MonLoaderEntry entries[];
+      |                   ^~~~~~~
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/bootstrap/vmmblob.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/smac_compat.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/smac.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/vnetEvent.o
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/vnetUserListener.o
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/bridge.c: 在函数‘VNetBridgeSendLargePacket’中:
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/bridge.c:1413:11: 错误：implicit declaration of function ‘skb_gso_segment’; did you mean ‘tcp_gso_segment’? [-Werror=implicit-function-declaration]
+ 1413 |    segs = skb_gso_segment(skb, 0);
+      |           ^~~~~~~~~~~~~~~
+      |           tcp_gso_segment
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/bridge.c:1413:9: 警告：assignment to ‘struct sk_buff *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+ 1413 |    segs = skb_gso_segment(skb, 0);
+      |         ^
+  LD [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/vmmon.o
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/vmmon.o: warning: objtool: CrossPage_CodePage+0x207: 'naked' return found in RETHUNK build
+/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/vmmon.o: warning: objtool: CrossPage_CodePage+0x207: missing int3 after ret
+  MODPOST /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/Module.symvers
+cc1：有些警告被当作是错误make[3]: *** [scripts/Makefile.build:252：/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only/bridge.o] 错误 1
+make[3]: *** 正在等待未完成的任务....
+  CC [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/vmmon.mod.o
+make[2]: *** [Makefile:2030：/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only] 错误 2
+make[1]: *** [Makefile:121：vmnet.ko] 错误 2
+make[1]: 离开目录“/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmnet-only”
+make: *** [Makefile:10：vmnet.ko] 错误 2
+make: *** 正在等待未完成的任务....
+  LD [M]  /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/vmmon.ko
+  BTF [M] /var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only/vmmon.ko
+make -C $PWD SRCROOT=$PWD/. \
+  MODULEBUILDDIR= postbuild
+make[2]: 进入目录“/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only”
+make[2]: “postbuild”已是最新。make[2]: 离开目录“/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only”
+cp -f vmmon.ko ./../vmmon.o
+make[1]: 离开目录“/var/lib/dkms/vmware-workstation/17.0.1_21139696/build/vmmon-only”
